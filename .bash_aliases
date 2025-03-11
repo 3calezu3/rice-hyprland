@@ -1,17 +1,47 @@
-# By CAZ
+# By CAZ  →  10/03/2025
+#Estos son todos mis alias:
 
-# Alias actualización de repositorios y de programas
-alias updat='sudo apt update'
-alias upgra='sudo apt upgrade -y'
+# Actualización de repositorios y de programas
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade -y'
+alias updagra='sudo apt update && sudo apt upgrade -y'
+
+# Instalar aplicaciones
+alias install='sudo apt install -y'
+
+# Verificación de servicios
+alias statuss='sudo systemctl status'
+alias starts='sudo systemctl start'
+alias enables='sudo systemctl enable'
+alias restarts='sudo systemctl restart'
+alias stops='sudo systemctl stop'
+
+# Configuracion del firewall
+alias firen='sudo ufw enable'
+alias firdi='sudo ufw disable'
+alias fires='sudo ufw status verbose'
+alias firea='sudo ufw allow'
+alias fired='sudo ufw deny'
+
+# Redes
+alias mip="ip addr show wlp2s0 | grep 'inet\b'|awk '{print \$2}'|cut -d/ -f1"
+alias mipp='curl ifconfig.me && echo " -> Mi IP Pública"'
 
 # Alias de lsd
 #alias ll='lsd -lAF --group-directories-first --blocks=user,size,date,name'
 
 # Alias de ls
-alias ll='ls -hago --group-directories-first'
+#alias ll='ls -hago --group-directories-first --blocks=user,size,date,name'
+#alias ll='ls -lAF --group-directories-first'
+alias ll='ls -goha --group-directories-first'
+alias ld='ls -go'
 
 # Alias de edicion
-alias edal='nano ~/.bash_aliases'	
+alias edba='nano ~/.bashrc'
+alias edal='nano ~/.bash_aliases'
+	
+# Alias de activación
+alias soba='source ~/.bashrc'
 alias soal='source ~/.bash_aliases'
 
 # Búsqueda de archivos
